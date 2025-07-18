@@ -1,0 +1,13 @@
+import csv
+
+# Abrir o arquivo CSV
+with open("dados.csv", newline='', encoding='utf-8') as csvfile:
+    leitor = csv.reader(csvfile)
+
+    # Ler o cabeçalho
+    cabecalho = next(leitor)
+    print("Cabeçalho:", cabecalho)
+
+    # Ler e exibir as linhas
+    for linha in leitor:
+        print("Linha:", linha)
